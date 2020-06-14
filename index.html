@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <title>FrontEndTest</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="myScript.js"></script>
+    </head>
+    <body>
+        <div class="shuffle-container">
+            <button onclick="shuffle()">
+                Shuffle
+            </button>
+        </div>
+        <div class="grid" id="main-container">
+            <!--  -->
+            <div class="box shuffleMe" id="1">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/6.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(1)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="2">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/5.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(2)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="3">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/4.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(3)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="4">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/3.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(4)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="5">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/2.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(5)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="6">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/1.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(6)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="7">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/1.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(7)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="8">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/2.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(8)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="9">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/3.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(9)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="10">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/4.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(10)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="11">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/5.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(11)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="12">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/6.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(12)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="13">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/4.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(13)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="box shuffleMe" id="14">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <a href="images/3.jpg" class="progressive replace">
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                        <div class="back">
+                            <a href="images/dummyImage.jpg" class="progressive replace">
+                                <img src="images/deleteImg.png" onclick="deleteImg(14)" id="delete-img" />
+                                <img src="images/blurImg.jpeg" class="preview" alt="image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
