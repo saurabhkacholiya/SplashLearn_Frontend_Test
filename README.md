@@ -10,4 +10,14 @@
 - delete icon with onclick on which all other images should adjust themselves and current Image should get deleted.
 
 ## demo image
-<img src="./images/demoImg.png" alt="demo image" width="1000px" height="600px">
+<img 
+    src="./images/demoImg.png" 
+    style="object-fit: cover;" 
+    alt="demo image" 
+    width="1000px" 
+    height="600px"
+>
+
+
+	
+	
