@@ -2,7 +2,8 @@
 if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) window.addEventListener('load', function() {
 
     // start
-    var pItem = document.getElementsByClassName('progressive replace'), timer;
+    let imageContainers = document.getElementsByClassName('progressive replace')
+    let timer
   
     window.addEventListener('scroll', scroller, false);
     window.addEventListener('resize', scroller, false);
@@ -22,20 +23,24 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
   
     // image in view?
     function inView() {
+      let pageYOffsetStartIndex = window.pageYOffset;
+      let pageYOffsetEndIndex = pageYOffsetStartIndex + window.innerHeight
+      let imageBoxCoordinate
+      let imageTopPixel 
+      let imageBottomPixel 
+      let imageIndex = 0;
+      while (imageIndex < imageContainers.length) {
   
-      var wT = window.pageYOffset;
-      var wB = wT + window.innerHeight, cRect, pT, pB, p = 0;
-      while (p < pItem.length) {
+        imageBoxCoordinate = imageContainers[imageIndex].getBoundingClientRect();
+        imageTopPixel = pageYOffsetStartIndex + imageBoxCoordinate.top;
+        imageBottomPixel = imageTopPixel + imageBoxCoordinate.height;
   
-        cRect = pItem[p].getBoundingClientRect();
-        pT = wT + cRect.top;
-        pB = pT + cRect.height;
-  
-        if (wT < pB && wB > pT) {
-          loadFullImage(pItem[p]);
-          pItem[p].classList.remove('replace');
+        if (pageYOffsetStartIndex < imageBottomPixel && pageYOffsetEndIndex > imageTopPixel) {
+          loadFullImage(imageContainers[imageIndex]);
+          imageContainers[imageIndex].classList.remove('replace');
+        }else{
+          imageIndex++;
         }
-        else p++;
       }
   
     }
@@ -47,7 +52,7 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
       if (!item || !item.href) return;
   
       // load image
-      var img = new Image();
+      let img = new Image();
       if (item.dataset) {
         img.srcset = item.dataset.srcset || '';
         img.sizes = item.dataset.sizes || '';
@@ -90,7 +95,7 @@ function deleteImg(id){
 
 function shuffle() {
   const container = document.getElementById("main-container");
-  
+
   const elementsArray = [...container.getElementsByClassName('shuffleMe')]
     elementsArray.forEach(function(element){
     container.removeChild(element);
